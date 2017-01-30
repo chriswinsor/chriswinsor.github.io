@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="code/script.js"></script>
+  </head>
+  
+  <body onload="fadeIn()">
+
+    <nav style="position:fixed;width:100%;top:0">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li class="dropdown"><a href="projects.html" class="dropbtn active">Projects</a>
+          <div class="dropdown-content">
+            <a href="projects.html#web">Web</a>
+            <a href="projects.html#code">Code</a>
+            <a href="projects.html#other">Other</a>
+          </div>
+        </li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+    </nav>
+    
+    <header id="start">
+      <h1 id="title">Projects</h1>
+    </header>
+    
+    <div id="web" class="col-100">
+      <h2>My Websites:</h2>
+      <p>
+        This section has all the websites I have made and maintain.
+      </p>
+      
+      <h3>ChrisWinsor.tech</h3>
+      <p>
+        This is the current site you are on. It was entirely coded by me without using a web builder. This is a continuing project that will be updated as I learn more and have new projects to add. The site is currently not online yet so the domain name may change.
+      </p>
+      
+      <h3>Afaayo.com <a class="clear" href="http://www.afaayo.com/home.html"><i class="fa fa-arrow-circle-right"></i></a></h3>
+      <p>
+        This is a site that I created and maintain for a company I am a board member of. It is created using GoDaddy's Website builder. 
+      </p>
+    </div>
+
+    <div id="code" class="col-100">
+      <h2>My Code:</h2>
+      <p>
+        This section has various code bundles that can be downloaded for viewing my coding style.
+      </p>
+      
+      <h3>Venn Diagram Algorithm <a class="clear" href="files/Venn_Programs.zip"><i class="fa fa-download"></i></a></h3>
+      <p>
+        This is the C++ code that I used for the paper here. The Basics of what it does is it takes in a file of Venn diagrams, and finds what it called the dual graph of the diagram which is then passed into my algorithim. my algorithm tries to find a Hamiltonian cycle in the graph, and returns if it was successful. The code comes in a zip file that has all the code, a ReadMe file whith running instructions, and a Bash file for the actual running of the program.
+      </p>
+      
+      <h3>Ray Tracer <a class="clear" href="files/Ray_Tracer.zip"><i class="fa fa-download"></i></a></h3>
+      <p>
+        This is a basic ray tracer I created in my computer graphics course. It implements ambient, difuse, and specular light as well as shadows. The main objects it has are spheres and plains but more object can be added easily.
+      </p>
+      
+      <h3>Interactive World <a class="clear" href="files/Interactive_World.zip"><i class="fa fa-download"></i></a></h3>
+      <p>
+        This program creates a procegurally generated world with a user controled camera. It implements a dynamic light model, basic animation, sheres, cubes, triangle meshes, controlable camera, and more. To run it, you need to use QT Creater or Visual Studion 2013 and higher.
+      </p>
+      
+      <h3>More Comming Soon</h3>
+      <p>
+        There is plenty more to add but they need some cleaning up and modifications before being added.
+      </p>
+    </div>
+
+    <div id="other" class="col-100">
+      <h2>My Other Work:</h2>
+      <p>
+        This section has everything that dosn't fit in the other sections like research papers and Excel files.
+      </p>
+      
+      <h3>A Fast Way to Extend Simple Venn Diagrams <a class="clear" href="files/Venn_Report.pdf"><i class="fa fa-download"></i></a></h3>
+      <p>
+        This is a paper that I wrote entirely in LaTeX for a final project in a topics course in algorithms. It covers a conjecture proposed by Peter Winkler and presents an algorithm that finds if a simple Venn diagram is extendable or not. The result was an algorithm that could extend the 3,430,404 6-Venn diagrams 90% of the time in one hour. The algorithm developed by the professor did an exaustive search that took three days. Using my algorithm to eliminate 90% of the diagrams and then run the professors algorithm would reduce the total computation time drasticly to do an exhaustive search. The code can be found in the code section here.....
+      </p>
+      
+      <h3>Mathematics of Air Combat <a class="clear" href="files/Mathematics%20of%20Air%20Combat.pdf"><i class="fa fa-download"></i></a></h3>
+      <p>
+        This is a paper that I wrote for my history of world war II course. It covers a couple of areas where mathematicians made contributions to improve air to air combat. My professor liked it so much that it was the only paper to get an A+ which is rare from him, and he sugested I submit it to an undergraduate jurnal. I did that and it is now in the per-review stage.
+      </p>
+    </div>
+  </body>
+</html>
