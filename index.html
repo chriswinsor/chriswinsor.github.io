@@ -4,33 +4,93 @@
     <meta charset="UTF-8">       
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="styles/main.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- JavaScript -->
     <script src="code/script.js"></script>
+    
+    <!-- bootstrap and jQuery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/bootstrapTest.css">
+    
+    <script>
+       $(document).ready(function(){
+         // Changes the breakpoint for the menue depending on the height of the title
+         $("nav").attr("data-offset-top", $("#start").outerHeight(true));
+       }); 
+    </script>
+
   </head>
   <body onload="fadeIn()">
-    
-    <nav style="position:fixed;width:100%;top:0">
-      <ul>
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li class="dropdown"><a href="projects.html" class="dropbtn">Projects</a>
-          <div class="dropdown-content">
-            <a href="projects.html#web">Web</a>
-            <a href="projects.html#code">Code</a>
-            <a href="projects.html#other">Other</a>
-          </div>
-        </li>
-        <li><a href="contact.html">Contact Me</a></li>
-      </ul>
-    </nav>
     
     <header id="start">
       <h1 id="title">Welcome to Chris Winsor's Portfolio</h1>
       <h2 id="subtitle">A place to learn about me</h2>
     </header>
     
-    <div class="col-100">
-      Welcome. This is a site that I am creating to display some of the work I have done. It is a work in progress and will get more added to it as I complete more work worth adding. About me contains my resume. Projects contains the various projects I have worked on, and contact me contains all my contact information.
+    <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="200">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Chris Winsor</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="projects.html">Web</a></li>
+                <li><a href="projects.html#code">Code</a></li>
+                <li><a href="projects.html#other">Other</a></li>
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact Me</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container-fluid">
+      <div class="card">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>
+              Welcome. This is a site that I am creating to display some of the work I have done. It is a work in progress and will get more added to it as I complete more work worth adding. About me contains my resume. Projects contains the various projects I have worked on, and contact me contains all my contact information.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="row">
+          <div class="col-sm-12">
+            <h3>Upcomming Changes</h3>
+            <hr>
+            <p>
+              Here are some of the changes in the works that should be live soon.
+              <ul>
+                <li>Mobile compatibility using Bootstrap</li>
+                <li>New Home page</li>
+                <li>History section</li>
+                <li>Personal photos</li>
+                <li>Future project section</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
     
   </body>

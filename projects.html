@@ -4,143 +4,193 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects</title>
-    <link rel="stylesheet" href="styles/main.css">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- JavaScript -->
     <script src="code/script.js"></script>
-    <script src="code/dynaCERT_Calc.js"></script>
+    
+    <!-- bootstrap and jQuery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/bootstrapTest.css">
+    
+    <script>
+       $(document).ready(function(){
+         // Changes the breakpoint for the menue depending on the height of the title
+         $("nav").attr("data-offset-top", $("#start").outerHeight(true));
+       }); 
+    </script>
+
   </head>
   
   <body onload="fadeIn()">
-
-    <nav style="position:fixed;width:100%;top:0">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li class="dropdown"><a href="projects.html" class="dropbtn active">Projects</a>
-          <div class="dropdown-content">
-            <a href="projects.html#web">Web</a>
-            <a href="projects.html#code">Code</a>
-            <a href="projects.html#other">Other</a>
-          </div>
-        </li>
-        <li><a href="contact.html">Contact Me</a></li>
-      </ul>
-    </nav>
     
     <header id="start">
       <h1 id="title">Projects</h1>
     </header>
     
-    <div id="web" class="col-100">
-      <h2>My Websites:</h2>
-      <p>
-        This section has all the websites I have made and maintain.
-      </p>
-      
-      <h3>chriswinsor.github.io <a class="clear" href="https://chriswinsor.github.io/index.html"> <i class="fa fa-arrow-circle-right"></i> </a></h3>
-      <p>
-        This is the current site you are on. It was entirely coded by me without using a web builder. This is a continuing project that will be updated as I learn more and have new projects to add. I plan on adding some more complex interactions/designs that I know how to do, but I am holding off on doing so until I can integrate them smoothly without looking out of place.
-      </p>
-      
-      <h3 id="afaayo">Afaayo.com <a class="clear" href="http://www.afaayo.com/home.html"><i class="fa fa-arrow-circle-right"></i></a></h3>
-      <p>
-        This is a site that I created and maintain for a company I am a board member of. It is created using GoDaddy's Website builder. 
-      </p>
-    </div>
+    <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="20">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Chris Winsor</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li class="dropdown active">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="projects.html">Web</a></li>
+                <li><a href="projects.html#code">Code</a></li>
+                <li><a href="projects.html#other">Other</a></li>
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact Me</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container-fluid">
+      <div id="web" class="card">
+        <div class="row">
+          <div class="col-sm-12">
+            <h2>My Websites:</h2>
+            <p>
+              This section has all the websites I have made and maintain.
+            </p>
 
-    <div id="code" class="col-100">
-      <h2>My Code:</h2>
-      <p>
-        This section has various code bundles that can be downloaded to see my coding style.
-      </p>
-      
-      <h3>chriswinsor.github.io Code <a class="clear" href="https://github.com/chriswinsor/chriswinsor.github.io"><i class="fa fa-arrow-circle-right"></i></a></h3> 
-      <p>
-        This is all the code files for this website. It has all the HTML, CSS, and JavaScript files so you can easily see my coding style and implementation methods.
-      </p>
-      
-      <h3>dynaCERT Financing Calculator <a class="clear" href="files/dynaCERT%20Calculator.zip"><i class="fa fa-download"></i></a></h3>
-      <p>
-        This is an HTML form I created so people can see how much per month "X" dynaCERT units will cost if they are being financed. It is on the Afaayo website in the earlier section. It can be hard to find unless you are looking for it so I added it here. The code in action can be seen right below this.
-      </p>
-      <form >
-        <table style="border: 1px solid black;padding: 10px;">
-          <style>
-            tr:nth-child(even) {background-color: #f2f2f2}
-            td {
-              padding: 15px;
-              text-align: left;
-            }
-          </style>
-          <tr>
-            <td colspan="2"><img src="pictures/dynaCert-logo.jpeg" alt="dynaCERT"></td>
-          </tr>
-          <tr>
-            <td>Product:</td>
-            <td>
-              <select id="product">
-                <option value="-1">Please Choose One...</option>
-                <option value="8750">Unit</option>
-                <option value="10000">Unit + installation</option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <td>Number of Units:</td>
-            <td><input id="unitNum" type="number" value="0" min="0" required/></td>
-          </tr>
-          <tr>
-            <td>Length of Term:</td>
-            <td>
-              <select id="length">
-                <option value="-1">Please Choose One...</option>
-                <option value="24">24 Months</option>
-                <option value="36">36 Months</option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <td><input type="button" onclick="calc();" value="Calculate" /></td>
-          </tr>
-        </table>
-      </form>
-      
-      <h3>Venn Diagram Algorithm <a class="clear" href="files/Venn_Programs.zip"><i class="fa fa-download"></i></a></h3>
-      <p>
-        This is the C++ code that I used for the paper here. The Basics of what it does is it takes in a file of Venn diagrams and finds what it called the dual graph of the diagram which is then passed into my algorithm. My algorithm tries to find a Hamiltonian cycle in the graph and returns if it was successful. The code comes in a zip file that has all the code, a ReadMe file with running instructions, and a Bash file for the actual running of the program.
-      </p>
-      
-      <h3>Ray Tracer <a class="clear" href="files/Ray_Tracer.zip"><i class="fa fa-download"></i></a></h3>
-      <p>
-        This is a basic ray tracer I created in my computer graphics course. It implements ambient, diffuse, and specular light as well as shadows. The main objects it has are spheres and planes but more object can be added easily.
-      </p>
-      
-      <h3>Interactive World <a class="clear" href="files/Interactive_World.zip"><i class="fa fa-download"></i></a></h3>
-      <p>
-        This program creates a procedurally generated world with a user controlled camera. It implements a dynamic light model, basic animation, spheres, cubes, triangle meshes, controllable camera, and more. To run it, you will need to use QT Creator or Visual Studio 2013 and higher.
-      </p>
-      
-      <h3>More Comming Soon</h3>
-      <p>
-        There is plenty more to add but they need some cleaning up and modifications before being added.
-      </p>
-    </div>
+            <h3>chriswinsor.github.io <a class="clear" href="https://chriswinsor.github.io/index.html"> <i class="fa fa-arrow-circle-right"></i> </a></h3>
+            <p>
+              This is the current site you are on. It was entirely coded by me without using a web builder. This is a continuing project that will be updated as I learn more and have new projects to add. I plan on adding some more complex interactions/designs that I know how to do, but I am holding off on doing so until I can integrate them smoothly without looking out of place.
+            </p>
 
-    <div id="other" class="col-100">
-      <h2>My Other Work:</h2>
-      <p>
-        This section has everything that doesn't fit in the other sections, for example research papers and Excel files.
-      </p>
-      
-      <h3>A Fast Way to Extend Simple Venn Diagrams <a class="clear" href="files/Venn_Report.pdf"><i class="fa fa-download"></i></a></h3>
-      <p>
-        This is a paper that I wrote entirely in LaTeX for a final project in a topics course in algorithms. It covers a conjecture proposed by Peter Winkler and presents an algorithm that finds if a simple Venn diagram is extendable or not. The result was an algorithm that could extend the 3,430,404 6-Venn diagrams 90% of the time in one hour. The algorithm developed by the professor did an exhaustive search that took three days. Using my algorithm to eliminate 90% of the diagrams and then run the professors algorithm would reduce the total computation time drastically to do an exhaustive search. The code can be found in the code section under Venn Diagram Algorithm.
-      </p>
-      
-      <h3>Mathematics of Air Combat <a class="clear" href="files/Mathematics%20of%20Air%20Combat.pdf"><i class="fa fa-download"></i></a></h3>
-      <p>
-        This is a paper that I wrote for my history of world war II course. It covers a couple of areas where mathematicians made contributions to improve air to air combat. My professor liked it so much that it was the only paper to get an A+ which is rare from him, and he suggested I submit it to an undergraduate journal. I did that and it is now in the per-review stage.
-      </p>
+            <h3 id="afaayo">Afaayo.com <a class="clear" href="http://www.afaayo.com/home.html"><i class="fa fa-arrow-circle-right"></i></a></h3>
+            <p>
+              This is a site that I created and maintain for a company I am a board member of. It is created using GoDaddy's Website builder. 
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
+    
+    <div class="container-fluid">
+      <div id="code" class="card">
+        <div class="row">
+          <div class="col-sm-12">
+            <h2>My Code:</h2>
+            <p>
+              This section has various code bundles that can be downloaded to see my coding style.
+            </p>
+
+            <h3>chriswinsor.github.io Code <a class="clear" href="https://github.com/chriswinsor/chriswinsor.github.io"><i class="fa fa-arrow-circle-right"></i></a></h3> 
+            <p>
+              This is all the code files for this website. It has all the HTML, CSS, and JavaScript files so you can easily see my coding style and implementation methods.
+            </p>
+
+            <h3>dynaCERT Financing Calculator <a class="clear" href="files/dynaCERT%20Calculator.zip"><i class="fa fa-download"></i></a></h3>
+            <p>
+              This is an HTML form I created so people can see how much per month "X" dynaCERT units will cost if they are being financed. It is on the Afaayo website in the earlier section. It can be hard to find unless you are looking for it so I added it here. The code in action can be seen right below this.
+            </p>
+            <form >
+              <table style="border: 1px solid black;padding: 10px;">
+                <style>
+                  tr:nth-child(even) {background-color: #f2f2f2}
+                  td {
+                    padding: 15px;
+                    text-align: left;
+                  }
+                </style>
+                <tr>
+                  <td colspan="2"><img src="pictures/dynaCert-logo.jpeg" alt="dynaCERT"></td>
+                </tr>
+                <tr>
+                  <td>Product:</td>
+                  <td>
+                    <select id="product">
+                      <option value="-1">Please Choose One...</option>
+                      <option value="8750">Unit</option>
+                      <option value="10000">Unit + installation</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Number of Units:</td>
+                  <td><input id="unitNum" type="number" value="0" min="0" required/></td>
+                </tr>
+                <tr>
+                  <td>Length of Term:</td>
+                  <td>
+                    <select id="length">
+                      <option value="-1">Please Choose One...</option>
+                      <option value="24">24 Months</option>
+                      <option value="36">36 Months</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="button" onclick="calc();" value="Calculate" /></td>
+                </tr>
+              </table>
+            </form>
+
+            <h3>Venn Diagram Algorithm <a class="clear" href="files/Venn_Programs.zip"><i class="fa fa-download"></i></a></h3>
+            <p>
+              This is the C++ code that I used for the paper here. The Basics of what it does is it takes in a file of Venn diagrams and finds what it called the dual graph of the diagram which is then passed into my algorithm. My algorithm tries to find a Hamiltonian cycle in the graph and returns if it was successful. The code comes in a zip file that has all the code, a ReadMe file with running instructions, and a Bash file for the actual running of the program.
+            </p>
+
+            <h3>Ray Tracer <a class="clear" href="files/Ray_Tracer.zip"><i class="fa fa-download"></i></a></h3>
+            <p>
+              This is a basic ray tracer I created in my computer graphics course. It implements ambient, diffuse, and specular light as well as shadows. The main objects it has are spheres and planes but more object can be added easily.
+            </p>
+
+            <h3>Interactive World <a class="clear" href="files/Interactive_World.zip"><i class="fa fa-download"></i></a></h3>
+            <p>
+              This program creates a procedurally generated world with a user controlled camera. It implements a dynamic light model, basic animation, spheres, cubes, triangle meshes, controllable camera, and more. To run it, you will need to use QT Creator or Visual Studio 2013 and higher.
+            </p>
+
+            <h3>More Comming Soon</h3>
+            <p>
+              There is plenty more to add but they need some cleaning up and modifications before being added.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container-fluid">
+      <div id="other" class="card">
+        <div class="row">
+          <div class="col-sm-12">
+            <h2>My Other Work:</h2>
+            <p>
+              This section has everything that doesn't fit in the other sections, for example research papers and Excel files.
+            </p>
+
+            <h3>A Fast Way to Extend Simple Venn Diagrams <a class="clear" href="files/Venn_Report.pdf"><i class="fa fa-download"></i></a></h3>
+            <p>
+              This is a paper that I wrote entirely in LaTeX for a final project in a topics course in algorithms. It covers a conjecture proposed by Peter Winkler and presents an algorithm that finds if a simple Venn diagram is extendable or not. The result was an algorithm that could extend the 3,430,404 6-Venn diagrams 90% of the time in one hour. The algorithm developed by the professor did an exhaustive search that took three days. Using my algorithm to eliminate 90% of the diagrams and then run the professors algorithm would reduce the total computation time drastically to do an exhaustive search. The code can be found in the code section under Venn Diagram Algorithm.
+            </p>
+
+            <h3>Mathematics of Air Combat <a class="clear" href="files/Mathematics%20of%20Air%20Combat.pdf"><i class="fa fa-download"></i></a></h3>
+            <p>
+              This is a paper that I wrote for my history of world war II course. It covers a couple of areas where mathematicians made contributions to improve air to air combat. My professor liked it so much that it was the only paper to get an A+ which is rare from him, and he suggested I submit it to an undergraduate journal. I did that and it is now in the per-review stage.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
   </body>
 </html>
