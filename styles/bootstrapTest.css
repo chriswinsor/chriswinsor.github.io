@@ -54,14 +54,50 @@ section h2 {
 }
 
 /* Other */
-
-#start {
-  padding: 50px 0;
+.blue {
+  padding: 100px 0;
   background: aqua; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(left top, aqua, deepskyblue); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(bottom right, aqua, deepskyblue); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(bottom right, aqua, deepskyblue); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom right, aqua, deepskyblue); /* Standard syntax */
+}
+
+.green {
+  padding: 100px 0;
+  background: aqua; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, lightgreen, green); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, lightgreen, green); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, lightgreen, green); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, lightgreen, green); /* Standard syntax */
+}
+
+.purple {
+  padding: 100px 0;
+  background: aqua; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, violet, darkviolet); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, violet, darkviolet); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, violet, darkviolet); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, violet, darkviolet); /* Standard syntax */
+}
+
+.yellow {
+  padding: 100px 0;
+  background: aqua; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, yellow, darkorange); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, yellow, darkorange); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, yellow, darkorange); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, yellow, darkorange); /* Standard syntax */
+}
+
+#homeCarousel {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#start {
+  padding: 50px 0;
 }
 
 #title {
@@ -83,4 +119,9 @@ section h2 {
   margin: 10px 0;
   padding: 5px 20px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.empty {
+  margin: 0;
+  padding: 0;
 }

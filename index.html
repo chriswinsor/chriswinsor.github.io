@@ -29,7 +29,7 @@
   </head>
   <body onload="fadeIn()">
     
-    <header id="start">
+    <header id="start" class="blue">
       <h1 id="title">Welcome to Chris Winsor's Portfolio</h1>
       <h2 id="subtitle">A place to learn about me</h2>
     </header>
@@ -63,16 +63,63 @@
     </nav>
     
     <div class="container-fluid">
-      <div class="card">
-        <div class="row">
-          <div class="col-sm-12">
-            <p>
-              Welcome. This is a site that I am creating to display some of the work I have done. It is a work in progress and will get more added to it as I complete more work worth adding. About me contains my resume. Projects contains the various projects I have worked on, and contact me contains all my contact information.
-            </p>
+      <div class="card empty">
+      <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#homeCarousel" data-slide-to="1"></li>
+          <li data-target="#homeCarousel" data-slide-to="2"></li>
+          <li data-target="#homeCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          
+          <div class="item blue active">
+            <div class="carousel-caption">
+              <h1>Home</h1>
+              <p>This is the place that contains all my updates planed for this site.</p>
+            </div>
           </div>
+
+          <div class="item green">
+            <div class="carousel-caption">
+              <h1>About Me</h1>
+              <p>This page contains my online resume.</p>
+            </div>
+          </div>
+          
+          <div class="item purple">
+            <div class="carousel-caption">
+              <h1>Projects</h1>
+              <p>This page contains the various projects I have worked on.</p>
+            </div>
+          </div>
+          
+          <div class="item yellow">
+            <div class="carousel-caption">
+              <h1>Contact Me</h1>
+              <p>This page contains all my contact information.</p>
+            </div>
+          </div>
+
         </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#homeCarousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#homeCarousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
-      
+    </div>
+    </div>
+    
+    <div class="container-fluid">
       <div class="card">
         <div class="row">
           <div class="col-sm-12">
