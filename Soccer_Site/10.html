@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>    
+    <meta charset="UTF-8">       
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- JavaScript -->
+    <script src="code/script.js"></script>
+    
+    <!-- bootstrap and jQuery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/bootstrapTest.css">
+    
+    <script>
+    $(document).ready(function(){
+        $("#hide1").hide();
+        $("#hide2").hide();
+        $("#hide3").hide();
+        $("#hide4").hide();
+        $("#hide5").hide();
+      
+        $("#sec1").click(function(){
+            $("#sec1").css("color","#f79124");
+            $("#hide1").show();
+        });
+        $("#sec2").click(function(){
+            $("#sec2").css("color","#f79124");
+            $("#hide2").show();
+        });
+        $("#sec3").click(function(){
+            $("#sec3").css("color","#f79124");
+            $("#hide3").show();
+        });
+        $("#sec4").click(function(){
+            $("#sec4").css("color","#f79124");
+            $("#hide4").show();
+        });
+        $("#sec5").click(function(){
+            $("#sec5").css("color","#f79124");
+            $("#hide5").show();
+        });
+    });
+    </script>
+
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img src="pictures/Introduction_img.png" alt="Club Logo" width="35px" height="50px">
+          <a class="navbar-brand">Club Name</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="4.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+            <li><a href="9.html"><span class="glyphicon glyphicon-arrow-left"></span> Back</a></li>
+            <li><a href="13.html">Next <span class="glyphicon glyphicon-arrow-right"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card">
+            <h3>Adapting a Session</h3>
+            <hr>
+            <p>
+              Being able to adapt a session allows activity to be less tedious while boosting player engagement and development. 
+            </p>
+            <p>
+              <b><u>Click on the letters below</u></b> to learn how to get D-MOST out of your session. <b><u>Then click 'Next'</u></b> to try an on-field example.
+            </p>
+            <p>
+              <b id="sec1"><u>D</u></b><span id="hide1"><b><u>istance</u> - or size of playing space, width of gates, length of spacing, etc</b></span>
+            </p>
+            <p>
+              <b id="sec2"><u>M</u></b><span id="hide2"><b><u>ovement</u> - increase the complexity of the task by increasing Agility, Balance, Coordination & Speed (ABCS)</b></span>
+            </p>
+            <p>
+              <b id="sec3"><u>O</u></b><span id="hide3"><b><u>pposition</u> - introduce some passive pressure or live defender(s)</b></span>
+            </p>
+            <p>
+              <b id="sec4"><u>S</u></b><span id="hide4"><b><u>urface</u> - increase the complexity of the activity by using a different surface (inside, sole, outside, heel, toe, laces, thigh, chest thigh)</b></span>
+            </p>
+            <p>
+              <b id="sec5"><u>T</u></b><span id="hide5"><b><u>ime</u> - minimize time towards a challenge ie, <i>How many passes can you make in 30 seconds?</i></b></span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="border">
+            <img src="pictures/page10_montage2.jpg" alt="Montage" width="100%" height="100%">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>

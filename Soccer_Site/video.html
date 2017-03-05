@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>    
+    <meta charset="UTF-8">       
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- JavaScript -->
+    <script src="code/script.js"></script>
+    
+    <!-- bootstrap and jQuery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/bootstrapTest.css">
+    
+    <script>
+    function getUrlVars() {
+        var vars = [], hash;
+        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+        for(var i = 0; i < hashes.length; i++)
+        {
+            hash = hashes[i].split('=');
+            vars.push(hash[0]);
+            vars[hash[0]] = hash[1];
+        }
+        return vars;
+    }
+    $(document).ready(function(){
+        var query = getUrlVars();
+        var name = query["name"];
+        name = name.replace(/\+/g, " ");
+        var src = query["src"];
+        var pnum = query["pnum"] + ".html";
+      
+        $("#name").text(name);
+        $("#video").attr("src", src);
+        $("#back").attr("href", pnum);
+    }); 
+    </script>
+
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img src="pictures/Introduction_img.png" alt="Club Logo" width="35px" height="50px">
+          <a class="navbar-brand">Club Name</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="4.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+            <li><a id="back" href="index.html"><span class="glyphicon glyphicon-arrow-left"></span> Back</a></li>
+            <li><a href="#">Next <span class="glyphicon glyphicon-arrow-right"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card">
+            <h3 id="name">Video Name</h3>
+            <iframe width="100%" height="420" src="" id="video"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>

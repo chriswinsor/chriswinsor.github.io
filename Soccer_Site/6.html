@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>    
+    <meta charset="UTF-8">       
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- JavaScript -->
+    <script src="code/script.js"></script>
+    
+    <!-- bootstrap and jQuery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/bootstrapTest.css">
+    
+    <script>
+    $(document).ready(function(){
+        $("#panal1").hover(function(){
+            var text = '<div class="content_text"><p><b>Establish that everyone:</b></p><ul><li>Has Fun and Develops a Positive Outlook Towards Soccer</li><li>Develops Physical Literacy</li><li>Learns Elementary Soccer Skills</li></ul></div>';
+                
+            $("#content").html(text);
+        },
+        function(){
+            $("#content").html('<img src="pictures/player_centered_coaching.jpg" alt="Club Logo" width="100%" height="100%">');
+        });
+        $("#panal2").hover(function(){
+            var text = "<div class='content_text'><p><b>Coach to Different Learning Styles</b> - Recognise that each player learns in different ways. Some players might not be auditory listeners. Ensure you give verbal, visual & kinesthetic demonstrations.</p><p><b>Development Over Outcomes</b> - coaches must focus on the process of learning and development, not soley outcomes (winning games).</p><p><b>Avoid Over Coaching</b> - Letting the players play without coaching by remote control.</p><p><b>Fostering Player Independance</b> - Letting the players own their decisions towards independance and effective problem solvers.</p></div>";
+            
+            $("#content").html(text);
+        },
+        function(){
+            $("#content").html('<img src="pictures/player_centered_coaching.jpg" alt="Club Logo" width="100%" height="100%">');
+        });
+    });
+    </script>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img src="pictures/Introduction_img.png" alt="Club Logo" width="35px" height="50px">
+          <a class="navbar-brand">Club Name</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="4.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+            <li><a href="4.html"><span class="glyphicon glyphicon-arrow-left"></span> Back</a></li>
+            <li><a href="8.html">Next <span class="glyphicon glyphicon-arrow-right"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <h3>Player-Centered Coaching</h3>
+            <hr>
+            <p>
+              Player-Centered Coaching is recognizing what a child/player needs.Player-Centered Coaching creates an environment where a player's best development occurs. 
+            </p>
+            <p>
+              <b>Roll your mouse over the buttons below to learn more.</b>
+            </p>
+            <div class="panal panel-default" id="panal1">
+              <div class="panel-body"><b>You Need To:</b></div>
+            </div>
+            <div class="panal panel-default" id="panal2">
+              <div class="panel-body"><b>To Do This, You Must:</b></div>
+            </div>
+            <p>
+              <b><i>Please Note: On the next page you'll watch a video on the importance of effective demonstrations which maximize player comprehension, learning and development.</i></b>
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="border" id="content">
+            <img src="pictures/player_centered_coaching.jpg" alt="Coach" width="100%" height="100%">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>

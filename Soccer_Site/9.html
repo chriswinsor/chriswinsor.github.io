@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>    
+    <meta charset="UTF-8">       
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- JavaScript -->
+    <script src="code/script.js"></script>
+    
+    <!-- bootstrap and jQuery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/bootstrapTest.css">
+    
+    <script>
+    $(document).ready(function(){
+        $("#panal1").click(function(){
+            var text = "<div class='content_text'><ul><li><b>Minimizing Transition Time</b> - Get them in quickly - "+'"Last one in is a rubber ducky"'+"</li><li><b>Delegate, delegate, delegate</b> - Use Ast. Coaches & parents to help with the next activity's set-up and take down to save time.</li><li><b>Keep them busy during transitions</b> - Assign a task during transitions to keep them focused. For example, get them to practice their "+'"toe taps"'+" or passing. If you are changing the field layout, get them to collect cones or nets.</li></ul></div>";
+                
+            $("#content").html(text);
+        });
+      
+        $("#panal2").click(function(){
+            var text = '<div class="content_text"><ul><li><b>Consistent Redirection Message</b> - Have a consistent message that your players will come to recognize as a call for attention. Click on the samples below to hear some examples.</li></ul><p><button onclick="PlaySound('+"'ClapOnce1'"+')"><span class="glyphicon glyphicon-play"></span></button> "Clap once, clap twice, clap three times!"</p><p><button onclick="PlaySound('+"'Stop_standstill_freeze'"+')"><span class="glyphicon glyphicon-play"></span></button> "Stop, standstill, freeze!"</p><ul><li><b>Immobilize Balls</b> - Players will be distracted and will distract others when there are actve balls around. Keeping the balls immobilized will help keep their attention.</li><li><b>Be Engaging</b> - Talk to your players, establish a rapport with them. You will find they will be more engaged when they become more comfortable around you.</li><li><b>Capture Their Imagination</b> - By appealing to their imagination you can capture their attention. The player is a mouse, the ball is a piece of cheese and the coach is the cat!</li></ul></div>';
+            
+            $("#content").html(text);
+        });
+        $("#panal3").click(function(){
+            var text = "<div class='content_text'><ul><li><b>Avoid Long Winded Explanations</b> - Demonstrations & interventions should be short & sweet (60-90 seconds or less)</li><li><b>Paint the Picture!</b> - When demonstrating or intervening create a picture for the players to see - this will maximize learning & comprehension. A picture says a thousand words.</li><li><b>Be Prepared!</b> - Use the resources at your disposal from your TD, this program's "+'"Library"'+" of activity or talk with other coaches.</li></ul></div>";
+                
+            $("#content").html(text);
+        });
+    });
+    </script>
+    <script>
+        function PlaySound(melody) {
+            var path = "pictures/"
+            var snd = new Audio(path + melody + ".mp3");
+            snd.play();
+        }
+    </script>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img src="pictures/Introduction_img.png" alt="Club Logo" width="35px" height="50px">
+          <a class="navbar-brand">Club Name</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="4.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+            <li><a href="8.html"><span class="glyphicon glyphicon-arrow-left"></span> Back</a></li>
+            <li><a href="10.html">Next <span class="glyphicon glyphicon-arrow-right"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <h3>Maximizing Participation, Attention & Learning</h3>
+            <hr>
+            <p>
+              By maximizing <b>Participation, Attention & Learning (PAL)</b> we maximize player development on many levels.
+            </p>
+            <p>
+              <b>Click on the buttons below to learn more.</b>
+            </p>
+            <div class="panal panel-default" id="panal1">
+              <div class="panel-body"><b>Maximize Time</b></div>
+            </div>
+            <div class="panal panel-default" id="panal2">
+              <div class="panel-body"><b>Get Their Attention</b></div>
+            </div>
+            <div class="panal panel-default" id="panal3">
+              <div class="panel-body"><b>Short & Sweet</b></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="border" id="content">
+            <img src="pictures/coaching_styles.jpg" alt="Coaching Styles" width="100%" height="100%">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>

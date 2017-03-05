@@ -1,0 +1,157 @@
+/* Basic Elements */
+* {
+    box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(220,220,220);
+  margin: 0px;
+  color: #231f20;
+}
+
+h3 {
+  color: #f79124;
+  font-weight: bold;
+}
+
+hr {
+  color: #231f20;
+}
+
+section {
+  font-size: medium;
+  color: white;
+  margin: 5px 0px;
+  padding: 5px 15px;
+  background-color: #f79124;
+}
+
+.clear {
+  padding: 0;
+}
+/* Menu */
+.navbar {
+  z-index: 999999999;
+}
+
+/* Other */
+.primary {
+  color: #f79124;
+}
+
+.primaryLink {
+  color: #f79124;
+  text-decoration: none;
+}
+
+.primaryLink:hover {
+  color: #f7b154;
+  text-decoration: none;
+}
+
+.primaryHR {
+  height: 2px;
+  color: #f79124;
+  background-color: #f79124;
+  border-color: #f79124;
+  border: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.card {
+  background-color: rgb(250,250,247);
+  border-radius: 5px;
+  border: 4px solid #f79124;
+  margin: 10px 0;
+  padding: 5px 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.panal {
+  font-size: large;
+  text-align: center;
+  width: 70%;
+  border-radius: 5px;
+  border: 5px solid #f79124;
+  margin: 10px 15%;
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.5);
+  -webkit-transition-duration: 0.3s; /* Safari */
+  transition-duration: 0.3s;
+}
+
+.panal:hover {
+  width: 80%;
+  margin: 10px 10%;
+}
+
+.border {
+  border-radius: 5px;
+  border: 5px solid #f79124;
+  margin: 10px 0;
+  box-shadow: 5px 5px 16px 0px rgba(0,0,0,0.2);
+}
+
+.content_text {
+  font-size: large;
+  color: white;
+  padding: 20px 15px;
+  background-color: #f79124;
+}
+.content_text button {
+  color: black;
+  border-radius: 8px;
+}
+
+.dragable {
+  float: left;
+  background-color: dodgerblue;
+  border-radius: 8px;
+  color: white;
+  width: 150px;
+  height: 60px;
+  text-align: center;
+  padding: 10px;
+  
+  background: dodgerblue; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(dodgerblue, deepskyblue); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(dodgerblue, deepskyblue); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(dodgerblue, deepskyblue); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(dodgerblue, deepskyblue); /* Standard syntax */
+}
+
+.dropbox {
+  float: left;
+  margin: 5px 5px;
+  border-radius: 8px;
+  color: white;
+  width: 150px;
+  height: 60px;
+  text-align: center;
+}
+
+.dest {
+  background-color: white;
+}
+
+.modal {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) { 
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}

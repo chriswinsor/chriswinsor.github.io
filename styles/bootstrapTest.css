@@ -15,26 +15,6 @@ h1 {
   font-size: 3.125em;
 }
 
-h2 {
-  font-size: 1.875em;
-}
-
-section {
-  background-color: white;
-  font-size: 1.15em;
-  margin: 10px;
-  border: 3px solid black;
-  border-radius: 25px;
-  padding: 0 5px;
-  padding-bottom: 20px
-  
-}
-
-section h2 {
-  color: gray;
-  font-size: 1.875em;
-}
-
 .clear {
   color: gray;
   text-decoration: none;
@@ -44,6 +24,7 @@ section h2 {
   background-color: rgba(0,0,0,0.8);
   z-index: 999999999;
 }
+
 .affix {
     top: 0;
     width: 100%;

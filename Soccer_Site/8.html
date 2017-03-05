@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>    
+    <meta charset="UTF-8">       
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- JavaScript -->
+    <script src="code/script.js"></script>
+    
+    <!-- bootstrap and jQuery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/bootstrapTest.css">
+    
+    <script>
+    $(document).ready(function(){
+        $("#hide1").hide();
+        $("#hide2").hide();
+        $("#hide3").hide();
+        $("#hide4").hide();
+        $("#hide5").hide();
+        $("#hide6").hide();
+      
+        $("#sec1").click(function(){
+            $("#hide1").show();
+        });
+        $("#sec2").click(function(){
+            $("#hide2").show();
+        });
+        $("#sec3").click(function(){
+            $("#hide3").show();
+        });
+        $("#sec4").click(function(){
+            $("#hide4").show();
+        });
+        $("#sec5").click(function(){
+            $("#hide5").show();
+        });
+        $("#sec6").click(function(){
+            $("#hide6").show();
+        });
+    });
+    </script>
+
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img src="pictures/Introduction_img.png" alt="Club Logo" width="35px" height="50px">
+          <a class="navbar-brand">Club Name</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="4.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+            <li><a href="6.html"><span class="glyphicon glyphicon-arrow-left"></span> Back</a></li>
+            <li><a href="9.html">Next <span class="glyphicon glyphicon-arrow-right"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card">
+            <h3>Coaching Best Practices</h3>
+            <hr>
+            <p>
+              Click on each of the Coaching Best Practices for this age group. When you have revealed all of them you will be able to move on.
+            </p>
+            <section id="sec1">
+              <b>A Community of Learners</b><span id="hide1"> - Talk to the club's leadership and other experienced coaches at your club about what works for them. You will have access to years of hands on coaching experience right at your fingertips. Also, you can be a resource to other coaches. Put the 'U' & 'I' in community!</span>
+            </section>
+            <section id="sec2">
+              <b>Begin with an End in Mind - Session Goal?</b><span id="hide2"> - Spend time organizing what you would like your team to do for each practice. Have a plan in mind to maximize your activity. Use and explore 'The Library' on page 27.</span>
+            </section>
+            <section id="sec3">
+              <b>Super Role-Model</b><span id="hide3"> - It's important that you build positive relationships with your players. Work hard to develop a positive rapport while establishing your expectations for your environment.</span>
+            </section>
+            <section id="sec4">
+              <b>Groundhog Day? That's ok!</b><span id="hide4"> - For the younger age categories, don't be afraid to repeat the same exercises from week to week as long as the kids enjoy it. Repetition, or the familiar, can be comforting/reassuring for some kids. Repetition is also one of the 13 pillars of how we learn.</span>
+            </section>
+            <section id="sec5">
+              <b>Timing is Everything - Maximum Participation!</b><span id="hide5"> - Use structured activity for at least 50 minutes of an hour long practice. After a few water breaks and a scrimmage, you should hopefully have some tired and happy soccer players.</span>
+            </section>
+            <section id="sec6">
+              <b>Who's Turn is it Anyway?</b><span id="hide6"> - Limit long lines for activities. Kids standing around waiting for their turn aren't learning anything and will only get bored, distracted, and restless which may cause management issues for you.</span>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>

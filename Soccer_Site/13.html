@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>    
+    <meta charset="UTF-8">       
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- JavaScript -->
+    <script src="code/script.js"></script>
+    
+    <!-- bootstrap and jQuery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/bootstrapTest.css">
+    
+    <script>
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+      
+    function test(q){
+        if (q) return "correct";
+        return "incorrect";
+        
+    }
+      
+    function calc(){
+      var q1 = $("#drag1").parent().attr("id") == $("#drop1").attr("id");
+      var q2 = $("#drag2").parent().attr("id") == $("#drop2").attr("id");
+      var q3 = $("#drag3").parent().attr("id") == $("#drop3").attr("id");
+      var result1 = "Question 1 is " + test(q1);
+      var result2 = "Question 2 is " + test(q2);
+      var result3 = "Question 3 is " + test(q3);
+      
+      var responce = "";
+      if (q1 && q2 && q3) responce = "Congratulations! You got them all correct.";
+      else responce = "You got some incorrect. Look closely and try again.";
+      
+      $("#result1").text(result1);
+      $("#result2").text(result2);
+      $("#result3").text(result3);
+      $("#responce").text(responce);
+    }
+    </script>
+    
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img src="pictures/Introduction_img.png" alt="Club Logo" width="35px" height="50px">
+          <a class="navbar-brand">Club Name</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="4.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+            <li><a href="10.html"><span class="glyphicon glyphicon-arrow-left"></span> Back</a></li>
+            <li><a href="16.html">Next <span class="glyphicon glyphicon-arrow-right"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="dropbox" class="dropbox" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="drag1" class="dragable" draggable="true" ondragstart="drag(event)" style="padding-top:20px"><b>Command Style</b></div>
+          </div>
+          <div class="dropbox" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="drag2" class="dragable" draggable="true" ondragstart="drag(event)"><b>Q&A/Reciprocal Style</b></div>
+          </div>
+          <div class="dropbox" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="drag3" class="dragable" draggable="true" ondragstart="drag(event)"><b>Problem Solving Style</b></div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <hr>
+          <div id="drop1" class="dropbox dest" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div style="padding-top:25px">"Make contact on the equator of the ball"</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div id="drop2" class="dropbox dest" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div style="padding-top:25px">"Why do you think the ball went up in the air and didn't stay on the ground?"</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div id="drop3" class="dropbox dest" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div style="padding-top:25px">"How can we ensure that the ball is easily received by a player?"</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <ul class="pager">
+            <li class="previous"><a data-toggle="modal" data-target="#instructions">Instructions</a></li>
+            <li class="next"><a data-toggle="modal" data-target="#done"  onclick="calc()">I'm Done</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Instructions -->
+    <div class="modal fade" id="instructions" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Instructions</h4>
+          </div>
+          <div class="modal-body">
+            <p>Now it's time for you to give it a shot. Drag and drop the coaching style at the top with the sample commands below.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- I'm Done -->
+    <div class="modal fade" id="done" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Results</h4>
+          </div>
+          <div class="modal-body">
+            <p id="result1">The results will show up here.</p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="responce"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
